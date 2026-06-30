@@ -1,0 +1,225 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.navbar-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:78px;
+
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+.logo-icon{
+
+    font-size:2rem;
+
+}
+
+.logo-text{
+
+    font-size:1.7rem;
+
+    letter-spacing:.5px;
+
+}
+
+.logo-text span{
+
+    color:#FACC15;
+
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:var(--transition);
+
+}
+
+.nav-links a:hover{
+
+    color:#FACC15;
+
+}
+
+.nav-links a.active{
+
+    color:#FACC15;
+
+}
+
+.nav-links a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+
+    left:0;
+
+    width:100%;
+
+    height:2px;
+
+    background:white;
+
+    border-radius:20px;
+
+}
+
+/* =========================================
+   LOGOUT BUTTON
+========================================= */
+
+.logout-btn{
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    background:white;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.logout-btn:hover{
+
+    background:#FACC15;
+
+    color:black;
+
+    transform:translateY(-2px);
+
+}
+
+/* =========================================
+   MOBILE BUTTON
+========================================= */
+
+.menu-btn{
+
+    display:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:2rem;
+
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:900px){
+
+.nav-links{
+
+position:absolute;
+
+top:78px;
+
+left:0;
+
+width:100%;
+
+background:linear-gradient(180deg,var(--primary),var(--secondary));
+
+display:none;
+
+flex-direction:column;
+
+padding:35px;
+
+gap:20px;
+
+box-shadow:var(--shadow-lg);
+
+}
+
+.nav-links.active{
+
+display:flex;
+
+}
+
+.menu-btn{
+
+display:block;
+
+}
+
+.logout-btn{
+
+width:100%;
+
+}
+
+}

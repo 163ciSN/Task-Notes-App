@@ -1,0 +1,70 @@
+/* ==========================================
+   SEARCH BAR
+========================================== */
+
+.search-bar {
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 700px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 12px 18px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.search-input-wrapper:focus-within {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.search-icon {
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+    color: var(--text-dark);
+}
+
+.clear-btn {
+    background: var(--danger);
+    color: white;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.clear-btn:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+    .search-input-wrapper {
+        padding: 10px 14px;
+    }
+}
